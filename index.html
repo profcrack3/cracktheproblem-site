@@ -4,143 +4,113 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crack The Problem AI</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
-      margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f9fafb;
-      color: #111827;
+      background-color: #f6f8fa;
+      margin: 0;
+      padding: 0;
+      color: #1f2937;
     }
     header {
-      background: #1f2937;
+      background-color: #1f2937;
       color: white;
-      padding: 3rem 1rem;
+      padding: 2rem;
       text-align: center;
     }
-    header h1 {
-      font-size: 2.75rem;
-      margin-bottom: 1rem;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
-    header p {
+    p {
       font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
+      margin-top: 0;
     }
-
-    .plans {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding: 3rem 1rem;
-      max-width: 1200px;
+    section {
+      padding: 2rem;
+      max-width: 1000px;
       margin: auto;
     }
-
-    .plan {
+    .tiers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .tier {
       background: white;
+      padding: 1.5rem;
       border-radius: 1rem;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-      padding: 2rem;
-      width: 300px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
-
-    .plan h2 {
+    .tier h2 {
+      margin: 0 0 0.5rem;
       font-size: 1.5rem;
-      margin-bottom: 0.75rem;
     }
-
-    .plan p {
-      flex-grow: 1;
-      margin-bottom: 1.5rem;
+    .tier p {
       font-size: 1rem;
-      line-height: 1.5;
+      margin-bottom: 1rem;
+      flex-grow: 1;
     }
-
     .button {
-      background: #3b82f6;
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #3b82f6;
       color: white;
       text-decoration: none;
-      text-align: center;
-      padding: 0.75rem;
-      font-weight: 700;
       border-radius: 0.5rem;
-      transition: background 0.2s ease;
-    }
-
-    .button:hover {
-      background: #2563eb;
-    }
-
-    section.form {
-      padding: 3rem 1rem;
-      background-color: #e5e7eb;
+      font-weight: 600;
       text-align: center;
     }
-
-    section.form h2 {
-      margin-bottom: 1rem;
-    }
-
     iframe {
       width: 100%;
-      max-width: 900px;
-      height: 900px;
+      height: 800px;
       border: none;
-      border-radius: 0.5rem;
-      margin-top: 1rem;
-    }
-
-    @media (max-width: 768px) {
-      .plans {
-        flex-direction: column;
-        align-items: center;
-      }
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Crack The Problem AI</h1>
-    <p>Submit the hardest math or science problems you’ve got — we’ll crack them step-by-step using AI and human brainpower.</p>
+    <p>Submit your toughest math & science problems — we’ll crack 'em with AI + human brainpower!</p>
   </header>
 
-  <section class="plans">
-    <div class="plan">
-      <h2>Solo Crack</h2>
-      <p>Submit up to 10 questions/week. Each answer is AI-assisted and reviewed by a real human to ensure clarity.</p>
-      <a class="button" href="https://ko-fi.com/profcrack3/tiers" target="_blank">Subscribe Now – $5/mo</a>
-    </div>
+  <section>
+    <h2 style="text-align:center;">Choose Your Plan</h2>
+    <div class="tiers">
+      <div class="tier">
+        <h2>Solo Crack</h2>
+        <p>Submit up to 10 questions/week. Human-reviewed answers powered by AI.</p>
+        <a class="button" href="https://ko-fi.com/profcrack3/tiers" target="_blank">Subscribe Now – $5/mo</a>
+      </div>
 
-    <div class="plan">
-      <h2>Hybrid Helper</h2>
-      <p>Submit up to 20 questions/week. Get full step-by-step breakdowns, worked-out solutions, and priority service.</p>
-      <a class="button" href="https://ko-fi.com/profcrack3/tiers" target="_blank">Subscribe Now – $15/mo</a>
-    </div>
+      <div class="tier">
+        <h2>Hybrid Helper</h2>
+        <p>Up to 20 questions/week. Step-by-step breakdowns + priority queue placement.</p>
+        <a class="button" href="https://ko-fi.com/profcrack3/tiers" target="_blank">Subscribe Now – $15/mo</a>
+      </div>
 
-    <div class="plan">
-      <h2>Boss Mode</h2>
-      <p>Submit up to 50 questions/week. Get everything from Hybrid Helper plus: custom walkthroughs, private tutoring support, and optional video explanations.</p>
-      <a class="button" href="https://ko-fi.com/profcrack3/tiers" target="_blank">Subscribe Now – $30/mo</a>
+      <div class="tier">
+        <h2>Boss Mode</h2>
+        <p>50 questions/week. Custom walkthroughs, strategy help, and optional video/voice responses.</p>
+        <a class="button" href="https://ko-fi.com/profcrack3/tiers" target="_blank">Subscribe Now – $30/mo</a>
+      </div>
     </div>
   </section>
 
-  <section class="form">
-    <h2>Submit Your Problems</h2>
-    <p>Already subscribed? Fill out the form below and we’ll crack your questions ASAP:</p>
+  <section>
+    <h2 style="text-align:center;">Submit Your Problems</h2>
+    <p style="text-align:center;">After subscribing, use the form below to send your questions:</p>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdGeXm1V3mZZgKq3UFJ3R1mZeuRja78pUWKGy--XMy8enJO2w/viewform?embedded=true">Loading…</iframe>
   </section>
-
 </body>
 </html>
+
 
   
     
